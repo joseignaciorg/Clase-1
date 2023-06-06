@@ -1,22 +1,35 @@
-const name = 'Pepito';
-const number = 23;
-const boolean = true;
-const isUndefined = undefined;
-const isNull = null;
-const array = [1, 2, 3, 4, 5];
-const object = { a: 1, b: 3 };
+import Button from './components/button/Button';
+import CalculateCircleArea from './components/calculateCircleArea/CalculateCircleArea';
+import CalculateMedia from './components/calculateMedia/CalculateMedia';
+import CalculateSpeed from './components/calculateSpeed/CalculateSpeed';
+import CalculateSquareArea from './components/calculateSquareArea/CalculateSquareArea';
+import CalculateTriangleArea from './components/calculateTriangleArea/CalculateTriangleArea';
+import CelsiusToFahrenheit from './components/celsiusToFahrenheit/CelsiusToFahrenheit';
+import FahrenheitToCelsius from './components/fahrenheitToCelsius/FahrenheitToCelsius';
+import SayHello from './components/sayHello/SayHello';
+import TotalPrice from './components/totalPrice/TotalPrice';
+import WriteMessage from './components/writeMessage/WriteMessage';
 
 const App = () => {
 	return (
-		<div>
-			<p>Name:{name}</p>
-			<p>Number:{number}</p>
-			<p>Boolean:{boolean}</p>
-			<p>Undefined:{isUndefined}</p>
-			<p>Null:{isNull}</p>
-			<p>Array:{array}</p>
-			<p>Object:{object.a}</p>
-		</div>
+		<>
+			<Button name='Pedro' age={23} />
+			<SayHello name='Carolina' />
+			<CalculateSquareArea lado={4} />
+			<CalculateTriangleArea base={2} altura={3} />
+			<CalculateCircleArea radio={2} />
+			<CelsiusToFahrenheit celsius={23} />
+			<FahrenheitToCelsius fahrenheit={73.4} />
+			<TotalPrice precio={100} />
+			<WriteMessage
+				name='Nacho'
+				material='sandias'
+				size={5}
+				note='Marchando!'
+			/>
+			<CalculateMedia numberA={14} numberB={23} numberC={38} />
+			<CalculateSpeed speed={120}/>
+		</>
 	);
 };
 
